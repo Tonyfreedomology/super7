@@ -1,0 +1,41 @@
+super7-app/
+├── App.tsx                  # Entry point
+├── app.json                 # Expo configuration
+├── babel.config.js          # Babel configuration
+├── package.json             # Dependencies
+├── tsconfig.json            # TypeScript configuration
+├── assets/                  # Static assets
+│   ├── fonts/               # Custom fonts
+│   ├── sounds/              # Sound effects
+│   └── images/              # Images and icons
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── Button.tsx       # Custom button component
+│   │   ├── CircleTimer.tsx  # Animated circular timer
+│   │   ├── ExerciseCard.tsx # Exercise display component
+│   │   ├── TimeInput.tsx    # Time input component
+│   │   └── ProgressBar.tsx  # Workout progress indicator
+│   ├── screens/             # App screens
+│   │   ├── HomeScreen.tsx   # Time input screen
+│   │   ├── WorkoutScreen.tsx # Workout execution screen
+│   │   └── SettingsScreen.tsx # Optional settings
+│   ├── navigation/          # Navigation setup
+│   │   └── AppNavigator.tsx # React Navigation configuration
+│   ├── context/             # App state management
+│   │   ├── WorkoutContext.tsx # Workout state & logic
+│   │   └── SettingsContext.tsx # User preferences
+│   ├── utils/               # Utility functions
+│   │   ├── workout.ts       # Workout generation
+│   │   ├── storage.ts       # AsyncStorage helpers
+│   │   ├── sound.ts         # Sound effect player
+│   │   └── haptics.ts       # Haptic feedback
+│   ├── hooks/               # Custom React hooks
+│   │   ├── useWorkout.ts    # Workout logic hook
+│   │   └── useTimer.ts      # Timer management hook
+│   ├── constants/           # App constants
+│   │   ├── exercises.ts     # Exercise definitions
+│   │   ├── colors.ts        # Color scheme
+│   │   └── animations.ts    # Animation presets
+│   └── types/               # TypeScript type definitions
+│       └── index.ts         # Type definitions
+└── README.md                # Project documentation
