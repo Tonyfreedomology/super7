@@ -60,3 +60,44 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
           style={[
             styles.progressBar,
             { backgroundColor: progressColor },
+            animatedStyle,
+          ]}
+        />
+      </View>
+      
+      {showPercentage && (
+        <Text style={styles.percentageText}>
+          {Math.round(progress)}%
+        </Text>
+      )}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+  },
+  progressBarContainer: {
+    borderRadius: 4,
+    overflow: 'hidden',
+    width: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    width: '0%',
+  },
+  stepsText: {
+    fontSize: 14,
+    color: COLORS.textLight,
+    marginBottom: 4,
+  },
+  percentageText: {
+    fontSize: 14,
+    color: COLORS.textLight,
+    marginTop: 4,
+    textAlign: 'right',
+  },
+});
+
+export default ProgressBar;
