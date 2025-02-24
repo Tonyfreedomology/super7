@@ -1,0 +1,85 @@
+import * as Haptics from 'expo-haptics';
+
+/**
+ * Trigger light impact haptic feedback
+ * Used for subtle feedback like button presses
+ */
+export async function lightHaptic() {
+  try {
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+  } catch (error) {
+    console.error('Failed to trigger light haptic', error);
+  }
+}
+
+/**
+ * Trigger medium impact haptic feedback
+ * Used for transitions between exercises
+ */
+export async function mediumHaptic() {
+  try {
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+  } catch (error) {
+    console.error('Failed to trigger medium haptic', error);
+  }
+}
+
+/**
+ * Trigger heavy impact haptic feedback
+ * Used for workout completion
+ */
+export async function heavyHaptic() {
+  try {
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+  } catch (error) {
+    console.error('Failed to trigger heavy haptic', error);
+  }
+}
+
+/**
+ * Trigger notification success haptic feedback
+ * Used for workout completion
+ */
+export async function successHaptic() {
+  try {
+    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+  } catch (error) {
+    console.error('Failed to trigger success haptic', error);
+  }
+}
+
+/**
+ * Trigger notification warning haptic feedback
+ * Used for countdown
+ */
+export async function warningHaptic() {
+  try {
+    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+  } catch (error) {
+    console.error('Failed to trigger warning haptic', error);
+  }
+}
+
+/**
+ * Trigger notification error haptic feedback
+ * Used for errors or stopping a workout
+ */
+export async function errorHaptic() {
+  try {
+    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+  } catch (error) {
+    console.error('Failed to trigger error haptic', error);
+  }
+}
+
+/**
+ * Trigger selection haptic feedback
+ * Used for UI interactions
+ */
+export async function selectionHaptic() {
+  try {
+    await Haptics.selectionAsync();
+  } catch (error) {
+    console.error('Failed to trigger selection haptic', error);
+  }
+}
